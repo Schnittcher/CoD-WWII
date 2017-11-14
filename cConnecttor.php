@@ -1,5 +1,5 @@
 <?php
-  require config.php
+  require 'config.php';
 
   class Connector
   {
@@ -23,11 +23,11 @@
       switch ($type) {
         case 'player':
           $url = str_replace("%platform%", $this->platform, PLAYER);
-          $url = str_replace("%player%", $this->player, PLAYER);
+          $url = str_replace("%player%", $this->player, $url);
           break;
         case 'match':
           $url = str_replace("%platform%", $this->platform, MATCH);
-          $url = str_replace("%player%", $this->player, MATCH);
+          $url = str_replace("%player%", $this->player, $url);
           break;
         default:
           # code...
