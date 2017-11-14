@@ -4,15 +4,21 @@
     private $liftetime = [];
     private $weekly = [];
     private $username;
+    private $level;
+    private $prestige;
     private $platform;
 
     public function __construct($Request)
     {
       $this->username = $Request["username"];
       $this->platform = $Request["platform"];
+      $this->platform = $Request["level"];
+      $this->platform = $Request["prestige"];
       $this->lifetimeStat();
+      $this->weeklyStat();
     }
 
+#### User Informations Start
     public function getUsername()
     {
       return $this->username;
@@ -23,6 +29,18 @@
       return $this->platform;
     }
 
+    public function getLevel()
+    {
+      return $this->level;
+    }
+
+    public function getPrestige()
+    {
+      return $this->prestige;
+    }
+### User Informations End
+
+### Public Lifetime Statistics start
     public function getKills()
     {
       return $this->lifetime["kills"];
@@ -157,7 +175,8 @@
     {
       return $this->lifetime["unlockPoints"];
     }
-    
+### Public Lifetime Statistics end
+
     private function lifetimeStat()
     {
       $this->liftetime["kills"] = $Request["lifetime"]["all"]["kills"];
@@ -186,6 +205,133 @@
       $this->lifetime["matchesCompleted"] = $Request["lifetime"]["all"]["matchesCompleted"];
       $this->lifetime["unlockPoints"] = $Request["lifetime"]["all"]["unlockPoints"];
     }
+
+### Public Weekly Statistics start
+    public function getWeeklyKills()
+    {
+      return $this->weekly["kills"];
+    }
+
+    public function getWeeklkyDistanceTravelled()
+    {
+      return $this->weekly["distanceTravelled"];
+    }
+
+    public function getWekklyDivisionXpMountain()
+    {
+      return $this->weekly["divisionXpMountain"];
+    }
+
+    public function getWeeklyAccuracy()
+    {
+      return $this->weekly["accuracy"];
+    }
+
+    public function getWeeklyDivisionXpExpeditionary()
+    {
+      return $this->weekly["divisionXpExpeditionary"];
+    }
+
+    public function getWeeklyLosses()
+    {
+      return $this->weekly["losses"];
+    }
+
+    public function getWeeklyShotsLanded()
+    {
+      return $this->weekly["shotsLanded"];
+    }
+
+    public function getWeeklyScore()
+    {
+      return $this->weekly["score"];
+    }
+
+    public function getWeeklyTotalXP()
+    {
+      return $this->weekly["totalXp"];
+    }
+
+    public function getWeeklyHeadshots()
+    {
+      return $this->weekly["headshots"];
+    }
+
+    public function getWeeklyAssists()
+    {
+      return $this->weekly["assists"];
+    }
+
+    public function getWeeklyScorePerMinute()
+    {
+      return $this->weekly["scorePerMinute"];
+    }
+
+    public function getWeeklyDeaths()
+    {
+      return $this->weekly["deaths"];
+    }
+
+    public function getWeeklyWins()
+    {
+      return $this->weekly["wins"];
+    }
+
+    public function getWeeklyShotsMissed()
+    {
+      return $this->weekly["shotsMissed"];
+    }
+
+    public function getWeeklyKdRatio()
+    {
+      return $this->weekly["kdRatio"];
+    }
+
+    public function getWeeklyDivisionXpInfantry()
+    {
+      return $this->weekly["divisionXpInfantry"];
+    }
+
+    public function getWeeklyDivisionXpArmored()
+    {
+      return $this->weekly["divisionXpArmored"];
+    }
+
+    public function getWeeklyDivisionXpAirborne()
+    {
+      return $this->weekly["divisionXpAirborne"];
+    }
+
+    public function getWeeklyAvgSpeed()
+    {
+      return $this->weekly["avgSpeed"];
+    }
+
+    public function getWeeklyAvgKillDistance()
+    {
+      return $this->weekly["avgKillDistance"];
+    }
+
+    public function getWeeklyTimePlayed()
+    {
+      return $this->weekly["timePlayed"];
+    }
+
+    public function getWeeklyMatchesPlayed()
+    {
+      return $this->weekly["matchesPlayed"];
+    }
+
+    public function getWeeklyDivisionXpNone()
+    {
+      return $this->weekly["divisionXpNone"];
+    }
+
+    public function getWeeklyShotsFired()
+    {
+      return $this->weekly["shotsFired"];
+    }
+### Public Weekly Statistics end
 
     private function weeklyStat()
     {
