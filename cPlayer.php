@@ -12,10 +12,10 @@
     {
       $this->username = $Request["username"];
       $this->platform = $Request["platform"];
-      $this->platform = $Request["level"];
-      $this->platform = $Request["prestige"];
-      $this->lifetimeStat();
-      $this->weeklyStat();
+      $this->level = $Request["mp"]["level"];
+      $this->prestige = $Request["mp"]["prestige"];
+      $this->lifetimeStat($Request["mp"]);
+      $this->weeklyStat($Request["mp"]);
     }
 
 #### User Informations Start
@@ -177,10 +177,10 @@
     }
 ### Public Lifetime Statistics end
 
-    private function lifetimeStat()
+    private function lifetimeStat($Request)
     {
       $this->liftetime["kills"] = $Request["lifetime"]["all"]["kills"];
-      $this->lifetime["accuracy"] = $Request["lifetime"]["all"]["lifetime"]["all"]["accuracy"];
+      $this->lifetime["accuracy"] = $Request["lifetime"]["all"]["accuracy"];
       $this->lifetime["losses"] = $Request["lifetime"]["all"]["losses"];
       $this->lifetime["timePlayedAllies"] = $Request["lifetime"]["all"]["timePlayedAllies"];
       $this->lifetime["score"] = $Request["lifetime"]["all"]["score"];
@@ -333,7 +333,7 @@
     }
 ### Public Weekly Statistics end
 
-    private function weeklyStat()
+    private function weeklyStat($Request)
     {
       $this->weekly["kills"] = $Request["weekly"]["all"]["kills"];
       $this->weekly["distanceTravelled"] = $Request["weekly"]["all"]["distanceTravelled"];
