@@ -18,6 +18,11 @@
       return $this->request("player");
     }
 
+    public function getMatches()
+    {
+      return $this->request("match");
+    }
+
     private function request($type)
     {
       switch ($type) {
@@ -26,7 +31,7 @@
           $url = str_replace("%player%", $this->player, $url);
           break;
         case 'match':
-          $url = str_replace("%platform%", $this->platform, MATCH);
+          $url = str_replace("%platform%", $this->platform, MATCHES);
           $url = str_replace("%player%", $this->player, $url);
           break;
         default:

@@ -14,52 +14,52 @@
 
     public function getStartTime()
     {
-      return $matches[$this->match]["utcStartSeconds"];
+      return $this->matches[$this->match]["utcStartSeconds"];
     }
 
     public function getEndTime()
     {
-      return $matches[$this->match]["utcEndSeconds"];
+      return $this->matches[$this->match]["utcEndSeconds"];
     }
 
     public function getDuration()
     {
-      return $matches[$this->match]["duration"];
+      return $this->matches[$this->match]["duration"];
     }
 
     public function getMap()
     {
-      return $matches[$this->match]["map"];
+      return $this->matches[$this->match]["map"];
     }
 
     public function getMode()
     {
-      return $matches[$this->match]["mode"];
+      return $this->matches[$this->match]["mode"];
     }
 
     public function getResult()
     {
-      return $matches[$this->match]["result"];
+      return $this->matches[$this->match]["result"];
     }
 
     public function getWinningTeam()
     {
-      return $matches[$this->match]["WinningTeam"];
+      return $this->matches[$this->match]["WinningTeam"];
     }
 
     public function getPrivateMatch()
     {
-      return $matches[$this->match]["privateMatch"];
+      return $this->matches[$this->match]["privateMatch"];
     }
 
     public function getGameBattle()
     {
-      return $matches[$this->match]["gameBattle"];
+      return $this->matches[$this->match]["gameBattle"];
     }
 
     public function getPlaylistName()
     {
-      return $matches[$this->match]["playlistName"];
+      return $this->matches[$this->match]["playlistName"];
     }
 
     //Todo: Player Awards Start
@@ -68,107 +68,107 @@
 
     public function getPlayerStatsKills()
     {
-      return $matches[$this->match]["playerStats"]["kills"];
+      return $this->matches[$this->match]["playerStats"]["kills"];
     }
 
     public function getPlayerStatsShotsMissed()
     {
-      return $matches[$this->match]["playerStats"]["shotsMissed"];
+      return $this->matches[$this->match]["playerStats"]["shotsMissed"];
     }
 
     public function getPlayerStatsKdRatio()
     {
-      return $matches[$this->match]["playerStats"]["kdRatio"];
+      return $this->matches[$this->match]["playerStats"]["kdRatio"];
     }
 
     public function getPlayerStatsDistanceTravelled()
     {
-      return $matches[$this->match]["playerStats"]["distanceTravelled"];
+      return $this->matches[$this->match]["playerStats"]["distanceTravelled"];
     }
 
     public function getPlayerStatsDivisionXpMountain()
     {
-      return $matches[$this->match]["playerStats"]["divisionXpMountain"];
+      return $this->matches[$this->match]["playerStats"]["divisionXpMountain"];
     }
 
     public function getPlayerStatsAccuracy()
     {
-      return $matches[$this->match]["playerStats"]["accuracy"];
+      return $this->matches[$this->match]["playerStats"]["accuracy"];
     }
 
     public function getPlayerStatsDivisionXpExpeditionary()
     {
-      return $matches[$this->match]["playerStats"]["divisionXpExpeditionary"];
+      return $this->matches[$this->match]["playerStats"]["divisionXpExpeditionary"];
     }
 
     public function getPlayerStatsDivisionXpInfantry()
     {
-      return $matches[$this->match]["playerStats"]["divisionXpInfantry"];
+      return $this->matches[$this->match]["playerStats"]["divisionXpInfantry"];
     }
 
     public function getPlayerStatsDivisionXpArmored()
     {
-      return $matches[$this->match]["playerStats"]["divisionXpArmored"];
+      return $this->matches[$this->match]["playerStats"]["divisionXpArmored"];
     }
 
     public function getPlayerStatsShotsLanded()
     {
-      return $matches[$this->match]["playerStats"]["shotsLanded"];
+      return $this->matches[$this->match]["playerStats"]["shotsLanded"];
     }
 
     public function getPlayerStatsDivisionXpAirborne()
     {
-      return $matches[$this->match]["playerStats"]["divisionXpAirborne"];
+      return $this->matches[$this->match]["playerStats"]["divisionXpAirborne"];
     }
 
     public function getPlayerStatsAvgSpeed()
     {
-      return $matches[$this->match]["playerStats"]["avgSpeed"];
+      return $this->matches[$this->match]["playerStats"]["avgSpeed"];
     }
 
     public function getPlayerStatsAvgKillDistance()
     {
-      return $matches[$this->match]["playerStats"]["avgKillDistance"];
+      return $this->matches[$this->match]["playerStats"]["avgKillDistance"];
     }
 
     public function getPlayerStatsScore()
     {
-      return $matches[$this->match]["playerStats"]["score"];
+      return $this->matches[$this->match]["playerStats"]["score"];
     }
 
     public function getPlayerStatsTotalXP()
     {
-      return $matches[$this->match]["playerStats"]["totalXp"];
+      return $this->matches[$this->match]["playerStats"]["totalXp"];
     }
 
     public function getPlayerTimePlayed()
     {
-      return $matches[$this->match]["playerStats"]["timePlayed"];
+      return $this->matches[$this->match]["playerStats"]["timePlayed"];
     }
 
     public function getPlayerStatsHeadshots()
     {
-      return $matches[$this->match]["playerStats"]["headshots"];
+      return $this->matches[$this->match]["playerStats"]["headshots"];
     }
 
     public function getPlayerStatsDivisionXpNone()
     {
-      return $matches[$this->match]["playerStats"]["divisionXpNone"];
+      return $this->matches[$this->match]["playerStats"]["divisionXpNone"];
     }
 
     public function getPlayerStatsAssists()
     {
-      return $matches[$this->match]["playerStats"]["assists"];
+      return $this->matches[$this->match]["playerStats"]["assists"];
     }
 
     public function getPlayerStatsShotsFired()
     {
-      return $matches[$this->match]["playerStats"]["shotsFired"];
+      return $this->matches[$this->match]["playerStats"]["shotsFired"];
     }
 
     public function getPlayerStatsDeaths()
     {
-      return $matches[$this->match]["playerStats"]["deaths"];
+      return $this->matches[$this->match]["playerStats"]["deaths"];
     }
 
     //Todo: Summary Start
